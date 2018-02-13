@@ -1,0 +1,28 @@
+前端发送到客户端
+token:请求的标识
+url:业务标识(servlet的访问标识)
+dataType:[text | json] 数据格式
+data:string | Object 数据本身
+
+
+响应协议pull类型
+token:请求的token,
+state:响应码 [200:成功 | 300:失败]
+message:描述消息
+dataType: [text | json]
+data:数据
+requestType:pull | push
+
+
+响应协议push类型
+requestType:pull | push
+source:{
+	nickName:昵称,
+	sex:"",
+	describe:""	
+},
+nickName:""
+sendDatetime:""
+msg:""
+dataType:""
+business:业务id

@@ -1,0 +1,12 @@
+{
+  "head": {
+    "channelCode": "01",
+    "messageID": "a8c561e54c844829",
+    "productCode": "ZA_ZXYS_001",
+    "transCode": "FSB003"
+  },
+  "result": {
+    "code": "FAIL",
+    "desc": "保费金额校验错误！保单保费:314.1，己支付:629.10"
+  }
+}

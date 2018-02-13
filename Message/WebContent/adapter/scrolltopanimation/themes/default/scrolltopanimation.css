@@ -1,0 +1,9 @@
+/* 置顶按钮 */
+.ct-scrollTopAnimation-btn {
+    background-image: url(weibiaoti.png);
+    background-size: 100% 100%;
+}
+
+/*.ct-scrollTopAnimation-btn {*/
+    /*background-color: #fff;*/
+/*}*/

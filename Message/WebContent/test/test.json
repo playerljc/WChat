@@ -1,0 +1,12 @@
+{
+  "head": {
+    "channelCode": "01",
+    "messageID": "a8c561e54c844829",
+    "productCode": "ZA_ZXYS_001",
+    "transCode": "FSB003"
+  },
+  "payment": {
+    "orderId": "9b97402e9cc347e8a9f241deea9402ba",
+    "proposalNo": "12001839450"
+  }
+}

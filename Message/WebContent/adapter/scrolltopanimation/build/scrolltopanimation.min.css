@@ -1,0 +1,4 @@
+.ct-scrollTopAnimation-mask{position:fixed;width:100%;height:100%;z-index:999999;background:0 0;display:none}
+.ct-scrollTopAnimation-btn{position:absolute;width:2rem;height:2rem;right:.5rem;bottom:.5rem;z-index:999999;display:none}
+@media screen and (max-width:414px){.ct-scrollTopAnimation-btn{width:2rem;height:2rem}}
+@media screen and (min-width:480px){.ct-scrollTopAnimation-btn{width:1.5rem;height:1.5rem}}

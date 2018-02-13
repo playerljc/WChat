@@ -1,0 +1,23 @@
+{
+  "required": "required",
+  "requiredmessage": "请输入电话号码",
+  "pattern": "phone",
+  "validmessage": "请输入正确的电话号码"
+}
+
+{
+"required": "required",
+"requiredmessage": "请输入姓名"
+}
+
+[
+{"value": "11", "label": "身份证"},
+{"value": "12", "label": "护照"},
+{"value": "13", "label": "军官证"},
+{"value": "14", "label": "户口本"}
+]
+
+[
+{"value":"1","label":"男"},
+{"value":"2","label":"女"}
+]

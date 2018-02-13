@@ -1,0 +1,161 @@
+package com.playerljc.message.core;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+
+import javax.websocket.MessageHandler;
+import javax.websocket.RemoteEndpoint;
+import javax.websocket.Session;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
+public class Client {
+	
+	private String nickName;
+	private Session session; 
+	private String addTime;
+	
+	private EchoMessageHandlerText echoMessageHandlerText;
+	private EchoMessageHandlerBinary echoMessageHandlerBinary;
+	
+	public Client(Session session) {
+		this.session = session;
+		RemoteEndpoint.Basic remoteEndpointBasic = session.getBasicRemote();
+		echoMessageHandlerText = new EchoMessageHandlerText(remoteEndpointBasic);
+		echoMessageHandlerBinary = new EchoMessageHandlerBinary(remoteEndpointBasic);
+		session.addMessageHandler(echoMessageHandlerText);
+		session.addMessageHandler(echoMessageHandlerBinary);
+		
+	}
+	
+	public Session getSession() {
+		return session;
+	}
+	
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+	
+	public String getNickName() {
+		return nickName;
+	}
+	
+	public String getAddTime() {
+		return addTime;
+	}
+
+	public void setAddTime(String addTime) {
+		this.addTime = addTime;
+	}
+
+	public void send(String msg) throws IOException {
+		echoMessageHandlerText.send(msg);
+	}
+	
+	public JSONObject onMessageCore(String msg,boolean last) {
+		return echoMessageHandlerText.onMessageCore(msg, last);
+	}
+	
+	public void onMessage(String msg,boolean last) {
+		echoMessageHandlerText.onMessage(msg, last);
+	}
+	
+	
+	/**
+     * 文本消息
+     * @author Administrator
+     */
+    private class EchoMessageHandlerText implements MessageHandler.Partial<String> {
+
+        private final RemoteEndpoint.Basic remoteEndpointBasic;
+
+        private EchoMessageHandlerText(RemoteEndpoint.Basic remoteEndpointBasic) {
+            this.remoteEndpointBasic = remoteEndpointBasic;
+        }
+
+        public void send(String msg) throws IOException {
+        	remoteEndpointBasic.sendText(msg);
+		}
+        
+        public JSONObject onMessageCore(String msg, boolean last) {
+        	JSONObject response = null;
+        	try {
+				JSONObject msgObj = JSONObject.parseObject(msg);
+				String servletName = msgObj.getString("url");
+				ServletConfig servletConfig = ServletConfig.getInstance();
+				String className = servletConfig.getClassName(servletName);
+				IServlet servlet = ServletContext.getInstance().getServlet(className);
+				
+				Object data = null;
+				String dataType = msgObj.getString("dataType");
+				if("json".equals(dataType)) {
+					data = JSON.parseObject(msgObj.getString("data"));
+					response = servlet.service(Client.this,(JSONObject)data);
+				} else {
+					data = msgObj.getString("data");
+					response = servlet.service(Client.this,(String)data);
+				}
+
+				/**
+		         * token:请求的token,
+		         * state:响应码 [200:成功 | 300:失败]
+		         * message:描述消息
+		         * dataType: [text | json]
+		         * data:数据
+		         */
+				if(response != null) {
+					response.put("requestType", "pull");
+					response.put("token", msgObj.getString("token"));
+				}
+				
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			}
+			return response;
+        }
+        
+
+		/**
+         * 接收到了Client的文本消息
+         */
+        @Override
+        public void onMessage(String msg, boolean last) {
+        	try {
+        		JSONObject response = onMessageCore(msg, last);
+        		if(response != null) {
+        			remoteEndpointBasic.sendText(JSONObject.toJSONString(response));	
+        		}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+        }
+    }
+    
+
+    /**
+     * 字节消息
+     * @author Administrator
+     */
+    private class EchoMessageHandlerBinary implements MessageHandler.Partial<ByteBuffer> {
+            
+        private final RemoteEndpoint.Basic remoteEndpointBasic;
+        
+        private EchoMessageHandlerBinary(RemoteEndpoint.Basic remoteEndpointBasic) {
+            this.remoteEndpointBasic = remoteEndpointBasic;
+        }
+
+        /**
+         * 接收到了Cient的字节消息
+         */
+        @Override
+        public void onMessage(ByteBuffer msg, boolean last) {
+            
+        }
+    }
+
+}

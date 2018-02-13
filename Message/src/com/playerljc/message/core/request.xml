@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servlets>
+	
+	<servlet>
+        <servlet-name>servlet/setUserInfoServler</servlet-name>
+        <servlet-class>com.playerljc.servlet.SetUserInfoServler</servlet-class>
+    </servlet>
+    
+    <servlet>
+    	<servlet-name>servlet/getUserListServlet</servlet-name>
+    	<servlet-class>com.playerljc.servlet.GetUserListServlet</servlet-class>
+    </servlet>
+    
+    
+    <servlet>
+    	<servlet-name>servlet/getUserExceptSelfListServlet</servlet-name>
+    	<servlet-class>com.playerljc.servlet.GetUserExceptSelfListServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+    	<servlet-name>servlet/pushServlet</servlet-name>
+    	<servlet-class>com.playerljc.servlet.PushServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+    	<servlet-name>servlet/userCloseServlet</servlet-name>
+    	<servlet-class>com.playerljc.servlet.UserCloseServlet</servlet-class>
+    </servlet>
+    
+    
+    <servlet>
+    	<servlet-name>servlet/deleteUserServlet</servlet-name>
+    	<servlet-class>com.playerljc.servlet.DeleteUserServlet</servlet-class>
+    </servlet>
+    
+    
+    <!-- <servlet>
+    	<servlet-name>servlet/SetFileMetadata</servlet-name>
+    	<servlet-class>com.playerljc.servlet.SetFileMetadata</servlet-class>
+    </servlet> -->
+    
+    
+    	
+</servlets>

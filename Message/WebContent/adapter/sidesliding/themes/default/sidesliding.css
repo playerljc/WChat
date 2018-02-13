@@ -1,0 +1,32 @@
+.ct-sidesliding-overlay,
+.ct-sidesliding-reveal,
+.ct-sidesliding-push {
+    background: #fff;
+    /*box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);*/
+}
+
+/*遮罩*/
+.ct-sidesliding-mask {
+    background: rgba(0,0,0,.6);
+}
+
+.ct-sidesliding-overlay.left {
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+
+.ct-sidesliding-overlay.right {
+    border-left: 1px solid rgba(0,0,0,.1);
+}
+
+.ct-sidesliding-overlay.top {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.ct-sidesliding-overlay.bottom {
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.ct-sidesliding-reveal-master {
+    background: #fff;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+}

@@ -1,0 +1,60 @@
+<div data-page="messages" id="messages" class="page navbar-fixed">
+
+    <div class="app-nav">
+        <div class="app-navbar-inner">
+            <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i></a></div>
+            <div class="center sliding close"></div>
+            <div class="right">&nbsp</div>
+        </div>
+    </div>
+
+    <div class="toolbar">
+        <div class="messagebar">
+            <textarea placeholder="请输入消息"></textarea>
+            <!-- 加号 -->
+            <a class="addBtn"></a>
+            <!-- 表情 -->
+            <div class="expressionBtn"></div>
+            <a class="link">发送</a>
+        </div>
+
+        <!-- 工具标签页 -->
+        <div class="tabs tooltabs close">
+            <!-- 表情面板 -->
+            <div class="expression-container tab" id="expression-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!-- 工具面板 -->
+            <div class="tool-container tab active" id="tool-container">
+                <input type="file" name="fileField">
+                <input type="file" name="imageField">
+                <!-- 文件 -->
+                <div class="fileBtn toolItem"></div>
+                <!-- 图片 -->
+                <div class="imageBtn toolItem"></div>
+                <!-- 群发 -->
+                <div class="groupSendBtn toolItem"></div>
+                <!-- 语音 -->
+                <div class="audioBtn toolItem"></div>
+                <!-- 视频 -->
+                <div class="videoBtn toolItem"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="page-body" style="margin-top: -44px;">
+        <div class="ct-scrollTopAnimation-btn"></div>
+
+        <div class="ct-sidesliding-overlay">
+            <ul></ul>
+        </div>
+
+        <div class="page-content messages-content">
+            <div class="messages"></div>
+        </div>
+    </div>
+</div>

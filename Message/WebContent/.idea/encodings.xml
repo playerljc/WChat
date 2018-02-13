@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/adapter/sidesliding" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/user.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/usermanager.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/moudle/index/index.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/moudle/index/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/moudle/masspopup/masspopup.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/moudle/messages/messages.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/moudle/messages/messages.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/test.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/util/stringbuffer.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/util/websocket.js" charset="UTF-8" />
+  </component>
+</project>

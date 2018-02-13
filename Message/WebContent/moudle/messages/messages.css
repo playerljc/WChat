@@ -1,0 +1,220 @@
+#messages .expressionBtn,
+#messages .addBtn,
+#messages .link {
+    font-size: 16px;
+    width: 30px;
+    height: 44px;
+    line-height: 44px;
+    margin: 0 5px;
+    align-self: flex-end;
+}
+
+#messages .addBtn:before,
+#messages .imageBtn:before,
+#messages .groupSendBtn:before,
+#messages .fileBtn:before,
+#messages .audioBtn:before,
+#messages .videoBtn:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+}
+
+#messages .expressionBtn {
+    background: url(../../res/images/expression.svg) no-repeat;
+    background-size: 100% 100%;
+}
+
+#messages .addBtn:before {
+    content: '\f055';
+}
+
+#messages .imageBtn:before {
+    content: '\f03e';
+}
+
+#messages .groupSendBtn:before {
+    content: '\f0c0';
+}
+
+#messages .fileBtn:before {
+    content: '\f0f6';
+}
+
+#messages .audioBtn:before {
+    content: '\f001';
+}
+
+#messages .videoBtn:before {
+    content: '\f03d';
+}
+
+#messages input[type="file"] {
+    display: none;
+}
+
+#messages .toolbar {
+    height: auto !important;
+}
+
+#messages .center.close:after {
+    content: '\f107';
+}
+
+#messages .center:after {
+    content: '\f106';
+    color: #bbbbbb;
+    font-family: FontAwesome;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+}
+
+#messages .page-body {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#messages .messagebar {
+    width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#messages .tooltabs.close {
+    display: none;
+}
+
+#messages .tooltabs.open {
+    display: block;
+}
+
+#messages .tool-container {
+    overflow: hidden;
+}
+
+#messages .tool-container .toolItem {
+    float: left;
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+#messages .expression-container .swiper-wrapper {
+    padding-bottom: 1.5rem;
+}
+
+#messages .expression-container .swiper-wrapper .swiper-slide .expressionItemWrap {
+    float: left;
+    width: 14.28%;
+    height: 1.5rem;
+}
+
+#messages .ct-scrollTopAnimation-btn {
+    bottom: 50px;
+}
+
+#messages .fileWrap {
+    padding: .25rem;
+    box-sizing: border-box;
+}
+
+#messages .fileWrap .fileName {
+    margin: .25rem 0;
+}
+
+#messages .fileWrap .fileProgressWrap {
+    height: 1rem;
+    line-height: 1rem;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+#messages .fileWrap .fileProgressWrap .fileProgress {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: #c85e0b;
+    border-radius: 10px;
+}
+
+#messages .fileWrap .fileProgressWrap .fileProgressText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#messages .fileWrap .download {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #80d740;
+    color: #fff;
+}
+
+#messages .ct-sidesliding-overlay ul {
+    padding: 0;
+    margin: 0;
+}
+
+#messages .ct-sidesliding-overlay ul li {
+    position: relative;
+    padding: 5px;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+}
+
+#messages .ct-sidesliding-overlay ul li .delete {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: -.5rem;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#messages .ct-sidesliding-overlay ul li .logo {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#messages .ct-sidesliding-overlay ul li .name {
+    text-align: center;
+    padding: 5px 0;
+    color: #bbbbbb;
+}
+

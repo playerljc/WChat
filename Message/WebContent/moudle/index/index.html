@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <script src="/msg/adapter/jsloader.min.js"></script>
+    <script src="/msg/core/required.js"></script>
+    <title></title>
+</head>
+<body>
+
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+
+<!-- 群发对话框 -->
+<div id="mass-popup" class="mass-popup popup navbar-fixed page">
+
+    <div class="app-nav">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="close-popup" data-popup=".mass-popup"><i class="icon icon-back"></i></a>
+            </div>
+            <div class="center sliding">群发</div>
+            <div class="right" data-check="checkall" style="font-size: 12px;">全选</div>
+        </div>
+    </div>
+
+    <div class="toolbar">
+        <div class="button button-big button-fill color-red active submit">确定</div>
+    </div>
+
+    <div class="page-content" style="margin-top: -44px;padding:44px 0;">
+        <div class="list-block media-list">
+            <ul></ul>
+        </div>
+    </div>
+</div>
+
+<div class="views">
+    <div class="view view-main">
+        <div class="pages">
+
+            <div data-page="index" id="index" class="page navbar-fixed">
+
+                <!-- Search bar -->
+                <form data-search-list=".list-block-search" class="searchbar" style="top: 0;">
+                    <div class="searchbar-input">
+                        <input type="search" placeholder="搜索"/><a href="#" class="searchbar-clear"></a>
+                    </div>
+                    <a href="#" class="searchbar-cancel">取消</a>
+                </form>
+
+                <!-- Search bar overlay-->
+                <div class="searchbar-overlay"></div>
+
+                <div class="page-content" style="padding-top:44px;">
+                    <div class="list-block media-list">
+                        <ul id="userlist"></ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

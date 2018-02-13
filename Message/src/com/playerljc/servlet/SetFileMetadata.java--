@@ -1,0 +1,30 @@
+package com.playerljc.servlet;
+
+import com.alibaba.fastjson.JSONObject;
+import com.playerljc.message.core.Client;
+import com.playerljc.message.core.IServlet;
+
+/**
+ * 设置元数据
+ * @author Administrator
+ *
+ */
+public class SetFileMetadata implements IServlet {
+
+	@Override
+	public JSONObject service(Client client, String data) {
+		return null;
+	}
+
+	@Override
+	public JSONObject service(Client client, JSONObject metadata) {
+		client.setMetadata(metadata);
+		JSONObject response = new JSONObject();
+		response.put("state", 200);
+		response.put("message", "元数据设置成功");
+		response.put("dataType", "text");
+		response.put("data", "元数据设置成功");
+		return response;
+	}
+
+}

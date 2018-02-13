@@ -1,0 +1,13 @@
+#mass-popup .list-block .item-content .item-check:before {
+    content: '\f096';
+    font-family: FontAwesome;
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    color: #FF3B30;
+    margin-right: 10px;
+}
+
+#mass-popup .list-block .item-content .item-check.check:before {
+    content: '\f046';
+}
